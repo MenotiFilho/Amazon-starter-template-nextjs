@@ -4,7 +4,7 @@
 	"scripts": {
 		"dev": "next",
 		"build": "next build",
-		"start": "next start export NODE_OPTIONS=--openssl-legacy-provider"
+		"start": "next start --openssl-legacy-provider"
 	},
 	"dependencies": {
 		"@heroicons/react": "^2.0.16",
