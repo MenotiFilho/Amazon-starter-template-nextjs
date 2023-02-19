@@ -18,7 +18,9 @@ function Product({ id, title, price, description, category, image }) {
 			<p className=" absolute top-2 right-2 text-xs italic text-gray-400">
 				{category}
 			</p>
-			<Image src={image} height={200} width={200} objectFit="contain" />
+			<div>
+				<Image src={image} height={200} width={200} style="contain" />
+			</div>
 
 			<h4 className="my-3">{title}</h4>
 
@@ -26,7 +28,9 @@ function Product({ id, title, price, description, category, image }) {
 				{Array(rating)
 					.fill()
 					.map((_, i) => (
-						<StarIcon className="h-5" />
+						<div>
+							<StarIcon className="h-5" />
+						</div>
 					))}
 			</div>
 
