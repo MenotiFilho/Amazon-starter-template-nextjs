@@ -18,15 +18,13 @@ function Product({ id, title, price, description, category, image }) {
 			<p className=" absolute top-2 right-2 text-xs italic text-gray-400">
 				{category}
 			</p>
-			<div>
-				<div>
-					<Image
-						src={image}
-						height={200}
-						width={200}
-						style={{ objectFit: "contain" }}
-					/>
-				</div>
+			<div className="">
+				<Image
+					src={image}
+					width={300}
+					height={300}
+					style={{ objectFit: "contain" }}
+				/>
 			</div>
 
 			<h4 className="my-3">{title}</h4>
@@ -35,7 +33,7 @@ function Product({ id, title, price, description, category, image }) {
 				{Array(rating)
 					.fill()
 					.map((_, i) => (
-						<div>
+						<div key={""}>
 							<StarIcon className="h-5" />
 						</div>
 					))}
